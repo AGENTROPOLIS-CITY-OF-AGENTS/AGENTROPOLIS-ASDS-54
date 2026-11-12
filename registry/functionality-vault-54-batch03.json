@@ -1,0 +1,743 @@
+{
+  "schemaVersion": "0.1.0",
+  "batch": "03",
+  "sourceFamilies": [
+    "zenith",
+    "toonhub",
+    "craftline",
+    "obsidian",
+    "little-lantern"
+  ],
+  "capabilities": [
+    {
+      "id": "vault54.batch03.property-card",
+      "version": "0.1.0",
+      "family": "zenith",
+      "status": "SPECIFIED",
+      "owner": "ASDS-54",
+      "intentProducer": "CREATOR-CORE",
+      "executor": "CONSTRUCTION",
+      "inputs": [
+        "props",
+        "mediaManifest",
+        "deviceTier",
+        "fidelity"
+      ],
+      "outputs": [
+        "renderEvents",
+        "lifecycleEvents",
+        "verificationReceipts"
+      ],
+      "acceptance": [
+        "unit",
+        "browser",
+        "visual",
+        "mobile",
+        "accessibility",
+        "performance",
+        "resource-cleanup"
+      ],
+      "requiresRuntimeVerification": true
+    },
+    {
+      "id": "vault54.batch03.property-grid",
+      "version": "0.1.0",
+      "family": "zenith",
+      "status": "SPECIFIED",
+      "owner": "ASDS-54",
+      "intentProducer": "CREATOR-CORE",
+      "executor": "CONSTRUCTION",
+      "inputs": [
+        "props",
+        "mediaManifest",
+        "deviceTier",
+        "fidelity"
+      ],
+      "outputs": [
+        "renderEvents",
+        "lifecycleEvents",
+        "verificationReceipts"
+      ],
+      "acceptance": [
+        "unit",
+        "browser",
+        "visual",
+        "mobile",
+        "accessibility",
+        "performance",
+        "resource-cleanup"
+      ],
+      "requiresRuntimeVerification": true
+    },
+    {
+      "id": "vault54.batch03.service-selector",
+      "version": "0.1.0",
+      "family": "zenith",
+      "status": "SPECIFIED",
+      "owner": "ASDS-54",
+      "intentProducer": "CREATOR-CORE",
+      "executor": "CONSTRUCTION",
+      "inputs": [
+        "props",
+        "mediaManifest",
+        "deviceTier",
+        "fidelity"
+      ],
+      "outputs": [
+        "renderEvents",
+        "lifecycleEvents",
+        "verificationReceipts"
+      ],
+      "acceptance": [
+        "unit",
+        "browser",
+        "visual",
+        "mobile",
+        "accessibility",
+        "performance",
+        "resource-cleanup"
+      ],
+      "requiresRuntimeVerification": true
+    },
+    {
+      "id": "vault54.batch03.analytics-bars",
+      "version": "0.1.0",
+      "family": "zenith",
+      "status": "SPECIFIED",
+      "owner": "ASDS-54",
+      "intentProducer": "CREATOR-CORE",
+      "executor": "CONSTRUCTION",
+      "inputs": [
+        "props",
+        "mediaManifest",
+        "deviceTier",
+        "fidelity"
+      ],
+      "outputs": [
+        "renderEvents",
+        "lifecycleEvents",
+        "verificationReceipts"
+      ],
+      "acceptance": [
+        "unit",
+        "browser",
+        "visual",
+        "mobile",
+        "accessibility",
+        "performance",
+        "resource-cleanup"
+      ],
+      "requiresRuntimeVerification": true
+    },
+    {
+      "id": "vault54.batch03.responsive-navigation",
+      "version": "0.1.0",
+      "family": "zenith",
+      "status": "SPECIFIED",
+      "owner": "ASDS-54",
+      "intentProducer": "CREATOR-CORE",
+      "executor": "CONSTRUCTION",
+      "inputs": [
+        "props",
+        "mediaManifest",
+        "deviceTier",
+        "fidelity"
+      ],
+      "outputs": [
+        "renderEvents",
+        "lifecycleEvents",
+        "verificationReceipts"
+      ],
+      "acceptance": [
+        "unit",
+        "browser",
+        "visual",
+        "mobile",
+        "accessibility",
+        "performance",
+        "resource-cleanup"
+      ],
+      "requiresRuntimeVerification": true
+    },
+    {
+      "id": "vault54.batch03.spatial-figurine-carousel",
+      "version": "0.1.0",
+      "family": "toonhub",
+      "status": "SPECIFIED",
+      "owner": "ASDS-54",
+      "intentProducer": "CREATOR-CORE",
+      "executor": "CONSTRUCTION",
+      "inputs": [
+        "props",
+        "mediaManifest",
+        "deviceTier",
+        "fidelity"
+      ],
+      "outputs": [
+        "renderEvents",
+        "lifecycleEvents",
+        "verificationReceipts"
+      ],
+      "acceptance": [
+        "unit",
+        "browser",
+        "visual",
+        "mobile",
+        "accessibility",
+        "performance",
+        "resource-cleanup"
+      ],
+      "requiresRuntimeVerification": true
+    },
+    {
+      "id": "vault54.batch03.ghost-typography-stage",
+      "version": "0.1.0",
+      "family": "toonhub",
+      "status": "SPECIFIED",
+      "owner": "ASDS-54",
+      "intentProducer": "CREATOR-CORE",
+      "executor": "CONSTRUCTION",
+      "inputs": [
+        "props",
+        "mediaManifest",
+        "deviceTier",
+        "fidelity"
+      ],
+      "outputs": [
+        "renderEvents",
+        "lifecycleEvents",
+        "verificationReceipts"
+      ],
+      "acceptance": [
+        "unit",
+        "browser",
+        "visual",
+        "mobile",
+        "accessibility",
+        "performance",
+        "resource-cleanup"
+      ],
+      "requiresRuntimeVerification": true
+    },
+    {
+      "id": "vault54.batch03.grain-overlay",
+      "version": "0.1.0",
+      "family": "toonhub",
+      "status": "SPECIFIED",
+      "owner": "ASDS-54",
+      "intentProducer": "CREATOR-CORE",
+      "executor": "CONSTRUCTION",
+      "inputs": [
+        "props",
+        "mediaManifest",
+        "deviceTier",
+        "fidelity"
+      ],
+      "outputs": [
+        "renderEvents",
+        "lifecycleEvents",
+        "verificationReceipts"
+      ],
+      "acceptance": [
+        "unit",
+        "browser",
+        "visual",
+        "mobile",
+        "accessibility",
+        "performance",
+        "resource-cleanup"
+      ],
+      "requiresRuntimeVerification": true
+    },
+    {
+      "id": "vault54.batch03.pointer-ink-trail",
+      "version": "0.1.0",
+      "family": "craftline",
+      "status": "SPECIFIED",
+      "owner": "ASDS-54",
+      "intentProducer": "CREATOR-CORE",
+      "executor": "CONSTRUCTION",
+      "inputs": [
+        "props",
+        "mediaManifest",
+        "deviceTier",
+        "fidelity"
+      ],
+      "outputs": [
+        "renderEvents",
+        "lifecycleEvents",
+        "verificationReceipts"
+      ],
+      "acceptance": [
+        "unit",
+        "browser",
+        "visual",
+        "mobile",
+        "accessibility",
+        "performance",
+        "resource-cleanup"
+      ],
+      "requiresRuntimeVerification": true
+    },
+    {
+      "id": "vault54.batch03.webgl-liquid-reveal",
+      "version": "0.1.0",
+      "family": "craftline",
+      "status": "SPECIFIED",
+      "owner": "ASDS-54",
+      "intentProducer": "CREATOR-CORE",
+      "executor": "CONSTRUCTION",
+      "inputs": [
+        "props",
+        "mediaManifest",
+        "deviceTier",
+        "fidelity"
+      ],
+      "outputs": [
+        "renderEvents",
+        "lifecycleEvents",
+        "verificationReceipts"
+      ],
+      "acceptance": [
+        "unit",
+        "browser",
+        "visual",
+        "mobile",
+        "accessibility",
+        "performance",
+        "resource-cleanup"
+      ],
+      "requiresRuntimeVerification": true
+    },
+    {
+      "id": "vault54.batch03.dual-video-crossfade",
+      "version": "0.1.0",
+      "family": "craftline",
+      "status": "SPECIFIED",
+      "owner": "ASDS-54",
+      "intentProducer": "CREATOR-CORE",
+      "executor": "CONSTRUCTION",
+      "inputs": [
+        "props",
+        "mediaManifest",
+        "deviceTier",
+        "fidelity"
+      ],
+      "outputs": [
+        "renderEvents",
+        "lifecycleEvents",
+        "verificationReceipts"
+      ],
+      "acceptance": [
+        "unit",
+        "browser",
+        "visual",
+        "mobile",
+        "accessibility",
+        "performance",
+        "resource-cleanup"
+      ],
+      "requiresRuntimeVerification": true
+    },
+    {
+      "id": "vault54.batch03.masked-text-glitch",
+      "version": "0.1.0",
+      "family": "craftline",
+      "status": "SPECIFIED",
+      "owner": "ASDS-54",
+      "intentProducer": "CREATOR-CORE",
+      "executor": "CONSTRUCTION",
+      "inputs": [
+        "props",
+        "mediaManifest",
+        "deviceTier",
+        "fidelity"
+      ],
+      "outputs": [
+        "renderEvents",
+        "lifecycleEvents",
+        "verificationReceipts"
+      ],
+      "acceptance": [
+        "unit",
+        "browser",
+        "visual",
+        "mobile",
+        "accessibility",
+        "performance",
+        "resource-cleanup"
+      ],
+      "requiresRuntimeVerification": true
+    },
+    {
+      "id": "vault54.batch03.scroll-video-scrubber",
+      "version": "0.1.0",
+      "family": "obsidian",
+      "status": "SPECIFIED",
+      "owner": "ASDS-54",
+      "intentProducer": "CREATOR-CORE",
+      "executor": "CONSTRUCTION",
+      "inputs": [
+        "props",
+        "mediaManifest",
+        "deviceTier",
+        "fidelity"
+      ],
+      "outputs": [
+        "renderEvents",
+        "lifecycleEvents",
+        "verificationReceipts"
+      ],
+      "acceptance": [
+        "unit",
+        "browser",
+        "visual",
+        "mobile",
+        "accessibility",
+        "performance",
+        "resource-cleanup"
+      ],
+      "requiresRuntimeVerification": true
+    },
+    {
+      "id": "vault54.batch03.decoded-frame-bank",
+      "version": "0.1.0",
+      "family": "obsidian",
+      "status": "SPECIFIED",
+      "owner": "ASDS-54",
+      "intentProducer": "CREATOR-CORE",
+      "executor": "CONSTRUCTION",
+      "inputs": [
+        "props",
+        "mediaManifest",
+        "deviceTier",
+        "fidelity"
+      ],
+      "outputs": [
+        "renderEvents",
+        "lifecycleEvents",
+        "verificationReceipts"
+      ],
+      "acceptance": [
+        "unit",
+        "browser",
+        "visual",
+        "mobile",
+        "accessibility",
+        "performance",
+        "resource-cleanup"
+      ],
+      "requiresRuntimeVerification": true
+    },
+    {
+      "id": "vault54.batch03.clip-curtain-menu",
+      "version": "0.1.0",
+      "family": "obsidian",
+      "status": "SPECIFIED",
+      "owner": "ASDS-54",
+      "intentProducer": "CREATOR-CORE",
+      "executor": "CONSTRUCTION",
+      "inputs": [
+        "props",
+        "mediaManifest",
+        "deviceTier",
+        "fidelity"
+      ],
+      "outputs": [
+        "renderEvents",
+        "lifecycleEvents",
+        "verificationReceipts"
+      ],
+      "acceptance": [
+        "unit",
+        "browser",
+        "visual",
+        "mobile",
+        "accessibility",
+        "performance",
+        "resource-cleanup"
+      ],
+      "requiresRuntimeVerification": true
+    },
+    {
+      "id": "vault54.batch03.scroll-section-transitions",
+      "version": "0.1.0",
+      "family": "obsidian",
+      "status": "SPECIFIED",
+      "owner": "ASDS-54",
+      "intentProducer": "CREATOR-CORE",
+      "executor": "CONSTRUCTION",
+      "inputs": [
+        "props",
+        "mediaManifest",
+        "deviceTier",
+        "fidelity"
+      ],
+      "outputs": [
+        "renderEvents",
+        "lifecycleEvents",
+        "verificationReceipts"
+      ],
+      "acceptance": [
+        "unit",
+        "browser",
+        "visual",
+        "mobile",
+        "accessibility",
+        "performance",
+        "resource-cleanup"
+      ],
+      "requiresRuntimeVerification": true
+    },
+    {
+      "id": "vault54.batch03.threejs-board-book",
+      "version": "0.1.0",
+      "family": "little-lantern",
+      "status": "SPECIFIED",
+      "owner": "ASDS-54",
+      "intentProducer": "CREATOR-CORE",
+      "executor": "CONSTRUCTION",
+      "inputs": [
+        "props",
+        "mediaManifest",
+        "deviceTier",
+        "fidelity"
+      ],
+      "outputs": [
+        "renderEvents",
+        "lifecycleEvents",
+        "verificationReceipts"
+      ],
+      "acceptance": [
+        "unit",
+        "browser",
+        "visual",
+        "mobile",
+        "accessibility",
+        "performance",
+        "resource-cleanup"
+      ],
+      "requiresRuntimeVerification": true
+    },
+    {
+      "id": "vault54.batch03.deformable-page-turn",
+      "version": "0.1.0",
+      "family": "little-lantern",
+      "status": "SPECIFIED",
+      "owner": "ASDS-54",
+      "intentProducer": "CREATOR-CORE",
+      "executor": "CONSTRUCTION",
+      "inputs": [
+        "props",
+        "mediaManifest",
+        "deviceTier",
+        "fidelity"
+      ],
+      "outputs": [
+        "renderEvents",
+        "lifecycleEvents",
+        "verificationReceipts"
+      ],
+      "acceptance": [
+        "unit",
+        "browser",
+        "visual",
+        "mobile",
+        "accessibility",
+        "performance",
+        "resource-cleanup"
+      ],
+      "requiresRuntimeVerification": true
+    },
+    {
+      "id": "vault54.batch03.layered-parallax-spread",
+      "version": "0.1.0",
+      "family": "little-lantern",
+      "status": "SPECIFIED",
+      "owner": "ASDS-54",
+      "intentProducer": "CREATOR-CORE",
+      "executor": "CONSTRUCTION",
+      "inputs": [
+        "props",
+        "mediaManifest",
+        "deviceTier",
+        "fidelity"
+      ],
+      "outputs": [
+        "renderEvents",
+        "lifecycleEvents",
+        "verificationReceipts"
+      ],
+      "acceptance": [
+        "unit",
+        "browser",
+        "visual",
+        "mobile",
+        "accessibility",
+        "performance",
+        "resource-cleanup"
+      ],
+      "requiresRuntimeVerification": true
+    },
+    {
+      "id": "vault54.batch03.book-showcase",
+      "version": "0.1.0",
+      "family": "little-lantern",
+      "status": "SPECIFIED",
+      "owner": "ASDS-54",
+      "intentProducer": "CREATOR-CORE",
+      "executor": "CONSTRUCTION",
+      "inputs": [
+        "props",
+        "mediaManifest",
+        "deviceTier",
+        "fidelity"
+      ],
+      "outputs": [
+        "renderEvents",
+        "lifecycleEvents",
+        "verificationReceipts"
+      ],
+      "acceptance": [
+        "unit",
+        "browser",
+        "visual",
+        "mobile",
+        "accessibility",
+        "performance",
+        "resource-cleanup"
+      ],
+      "requiresRuntimeVerification": true
+    },
+    {
+      "id": "vault54.batch03.gesture-page-navigation",
+      "version": "0.1.0",
+      "family": "little-lantern",
+      "status": "SPECIFIED",
+      "owner": "ASDS-54",
+      "intentProducer": "CREATOR-CORE",
+      "executor": "CONSTRUCTION",
+      "inputs": [
+        "props",
+        "mediaManifest",
+        "deviceTier",
+        "fidelity"
+      ],
+      "outputs": [
+        "renderEvents",
+        "lifecycleEvents",
+        "verificationReceipts"
+      ],
+      "acceptance": [
+        "unit",
+        "browser",
+        "visual",
+        "mobile",
+        "accessibility",
+        "performance",
+        "resource-cleanup"
+      ],
+      "requiresRuntimeVerification": true
+    },
+    {
+      "id": "vault54.batch03.animated-sky-texture",
+      "version": "0.1.0",
+      "family": "little-lantern",
+      "status": "SPECIFIED",
+      "owner": "ASDS-54",
+      "intentProducer": "CREATOR-CORE",
+      "executor": "CONSTRUCTION",
+      "inputs": [
+        "props",
+        "mediaManifest",
+        "deviceTier",
+        "fidelity"
+      ],
+      "outputs": [
+        "renderEvents",
+        "lifecycleEvents",
+        "verificationReceipts"
+      ],
+      "acceptance": [
+        "unit",
+        "browser",
+        "visual",
+        "mobile",
+        "accessibility",
+        "performance",
+        "resource-cleanup"
+      ],
+      "requiresRuntimeVerification": true
+    }
+  ],
+  "referenceConstants": {
+    "toonhub": {
+      "transitionMs": 650,
+      "roles": [
+        "center",
+        "left",
+        "right",
+        "back"
+      ]
+    },
+    "craftline": {
+      "trailScale": 0.25,
+      "crossfadeSeconds": 1.4
+    },
+    "obsidian": {
+      "scrollHeightVh": 500,
+      "lerpTau": 10,
+      "snap": 0.002,
+      "lruMax": 28,
+      "lead": 20,
+      "watchdogMs": 45000
+    },
+    "little-lantern": {
+      "spreads": 4,
+      "pageSegments": [
+        32,
+        10
+      ],
+      "turnMs": 1050
+    },
+    "zenith": {
+      "propertyCount": 3,
+      "chartData": [
+        [
+          35,
+          60,
+          45,
+          40,
+          55,
+          75,
+          60,
+          80,
+          55,
+          30
+        ],
+        [
+          8,
+          12,
+          18,
+          28,
+          32,
+          38,
+          55,
+          70,
+          85
+        ],
+        [
+          10,
+          75,
+          20,
+          35,
+          30,
+          65,
+          55,
+          25,
+          40
+        ]
+      ]
+    }
+  }
+}
