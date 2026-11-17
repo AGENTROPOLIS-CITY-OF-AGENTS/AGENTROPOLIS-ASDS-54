@@ -1,0 +1,190 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AGENTROPOLIS hybrid cinematic shot",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "shot_id",
+    "project_id",
+    "duration_s",
+    "fps_target",
+    "camera",
+    "scene_assets",
+    "blocking",
+    "render_passes",
+    "approval_state"
+  ],
+  "properties": {
+    "shot_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "project_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "sequence_id": {
+      "type": "string"
+    },
+    "duration_s": {
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "fps_target": {
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "aspect_ratio": {
+      "type": "string",
+      "pattern": "^[0-9]+:[0-9]+$"
+    },
+    "unit_scale_m": {
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "world_coordinate_system": {
+      "type": "string"
+    },
+    "camera": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "sensor_width_mm",
+        "focal_length_mm",
+        "position_m",
+        "quaternion_xyzw"
+      ],
+      "properties": {
+        "sensor_width_mm": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "focal_length_mm": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "position_m": {
+          "$ref": "#/$defs/vec3"
+        },
+        "quaternion_xyzw": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
+          "minItems": 4,
+          "maxItems": 4
+        },
+        "focus_distance_m": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "aperture_f": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        }
+      }
+    },
+    "scene_assets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "asset_id",
+          "source_sha256",
+          "rights_status"
+        ],
+        "properties": {
+          "asset_id": {
+            "type": "string"
+          },
+          "source_sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "rights_status": {
+            "enum": [
+              "approved",
+              "pending",
+              "denied"
+            ]
+          }
+        }
+      }
+    },
+    "blocking": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "actor_id",
+          "position_m"
+        ],
+        "properties": {
+          "actor_id": {
+            "type": "string"
+          },
+          "position_m": {
+            "$ref": "#/$defs/vec3"
+          }
+        }
+      }
+    },
+    "render_passes": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "beauty",
+          "depth",
+          "normal",
+          "object_id",
+          "motion_vectors",
+          "alpha"
+        ]
+      },
+      "uniqueItems": true
+    },
+    "ai_finishing": {
+      "type": "object",
+      "properties": {
+        "model_id": {
+          "type": "string"
+        },
+        "model_version": {
+          "type": "string"
+        },
+        "seed": {
+          "type": "integer"
+        },
+        "rights_status": {
+          "enum": [
+            "approved",
+            "pending",
+            "denied"
+          ]
+        }
+      }
+    },
+    "approval_state": {
+      "enum": [
+        "draft",
+        "pending",
+        "approved",
+        "rejected"
+      ]
+    },
+    "distribution_authorized": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "$defs": {
+    "vec3": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      },
+      "minItems": 3,
+      "maxItems": 3
+    }
+  }
+}
