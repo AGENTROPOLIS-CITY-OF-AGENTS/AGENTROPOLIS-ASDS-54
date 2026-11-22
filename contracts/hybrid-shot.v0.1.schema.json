@@ -1,0 +1,176 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://agentropolis.dev/asds54/contracts/hybrid-shot.v0.1.schema.json",
+  "title": "ASDS54 Hybrid Cinematic Shot v0.1",
+  "description": "Portable creative intent, not an inference order or authorization token.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "shot_id",
+    "scene_id",
+    "blocking",
+    "references",
+    "generation",
+    "audio",
+    "cost_policy"
+  ],
+  "properties": {
+    "shot_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9-]{1,80}$"
+    },
+    "scene_id": {
+      "type": "string",
+      "minLength": 2
+    },
+    "entity_ids": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string"
+      }
+    },
+    "blocking": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "frame_path",
+        "lens_mm",
+        "camera_height_m",
+        "camera_move"
+      ],
+      "properties": {
+        "frame_path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "lens_mm": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "camera_height_m": {
+          "type": "number",
+          "minimum": 0
+        },
+        "camera_move": {
+          "type": "string",
+          "minLength": 3
+        }
+      }
+    },
+    "references": {
+      "type": "array",
+      "maxItems": 5,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "role",
+          "path"
+        ],
+        "properties": {
+          "role": {
+            "enum": [
+              "locked_identity",
+              "wardrobe",
+              "environment_plate",
+              "composition_layout"
+            ]
+          },
+          "path": {
+            "type": "string",
+            "minLength": 1
+          },
+          "subject_id": {
+            "type": "string"
+          },
+          "use": {
+            "enum": [
+              "identity",
+              "style",
+              "composition_only"
+            ]
+          }
+        }
+      }
+    },
+    "generation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "provider",
+        "duration_s",
+        "prompt",
+        "lighting",
+        "never_list",
+        "no_dialogue"
+      ],
+      "properties": {
+        "provider": {
+          "const": "hermes-video"
+        },
+        "duration_s": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "maximum": 60
+        },
+        "prompt": {
+          "type": "string",
+          "minLength": 10
+        },
+        "lighting": {
+          "type": "string",
+          "minLength": 2
+        },
+        "never_list": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          }
+        },
+        "no_dialogue": {
+          "const": true
+        }
+      }
+    },
+    "audio": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "score_path",
+        "cue_start_s",
+        "target_lufs"
+      ],
+      "properties": {
+        "score_path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "cue_start_s": {
+          "type": "number",
+          "minimum": 0
+        },
+        "target_lufs": {
+          "const": -14
+        }
+      }
+    },
+    "cost_policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "max_additional_spend_usd",
+        "automatic_topups"
+      ],
+      "properties": {
+        "max_additional_spend_usd": {
+          "const": 0
+        },
+        "automatic_topups": {
+          "const": false
+        }
+      }
+    }
+  }
+}
