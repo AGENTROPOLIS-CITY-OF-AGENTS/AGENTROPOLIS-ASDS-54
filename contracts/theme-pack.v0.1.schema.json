@@ -1,0 +1,274 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://agentropolis.dev/asds54/theme-pack/v0.1",
+  "title": "ASDS54 ThemePack v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "id",
+    "label",
+    "license",
+    "palette",
+    "wallpaper",
+    "icons",
+    "widgets",
+    "cinematic"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "0.1.0"
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9.-]+$"
+    },
+    "label": {
+      "type": "string",
+      "minLength": 2
+    },
+    "license": {
+      "const": "original"
+    },
+    "palette": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "obsidian",
+        "cyan",
+        "red",
+        "cream"
+      ],
+      "properties": {
+        "obsidian": {
+          "$ref": "#/$defs/hex"
+        },
+        "cyan": {
+          "$ref": "#/$defs/hex"
+        },
+        "red": {
+          "$ref": "#/$defs/hex"
+        },
+        "cream": {
+          "$ref": "#/$defs/hex"
+        }
+      }
+    },
+    "wallpaper": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "renderer",
+        "layers",
+        "motion",
+        "glow"
+      ],
+      "properties": {
+        "renderer": {
+          "const": "android-canvas-procedural"
+        },
+        "layers": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "prefixItems": [
+            {
+              "$ref": "#/$defs/layer"
+            },
+            {
+              "$ref": "#/$defs/layer"
+            },
+            {
+              "$ref": "#/$defs/layer"
+            }
+          ],
+          "items": false
+        },
+        "motion": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "sensor",
+            "low_pass_alpha",
+            "strength_default",
+            "strength_min",
+            "strength_max",
+            "active_fps",
+            "idle_fps",
+            "reduced_motion_fps"
+          ],
+          "properties": {
+            "sensor": {
+              "const": "rotation_vector"
+            },
+            "low_pass_alpha": {
+              "type": "number",
+              "exclusiveMinimum": 0,
+              "maximum": 1
+            },
+            "strength_default": {
+              "type": "number",
+              "minimum": 0.5,
+              "maximum": 2
+            },
+            "strength_min": {
+              "const": 0.5
+            },
+            "strength_max": {
+              "const": 2
+            },
+            "active_fps": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 60
+            },
+            "idle_fps": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 30
+            },
+            "reduced_motion_fps": {
+              "const": 0
+            }
+          }
+        },
+        "glow": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "period_ms",
+            "min_alpha",
+            "max_alpha"
+          ],
+          "properties": {
+            "period_ms": {
+              "type": "integer",
+              "minimum": 500
+            },
+            "min_alpha": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "max_alpha": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            }
+          }
+        }
+      }
+    },
+    "icons": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "strategy",
+        "tiles"
+      ],
+      "properties": {
+        "strategy": {
+          "const": "in_app_or_user_approved_shortcuts"
+        },
+        "tiles": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "id",
+              "symbol",
+              "label"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "symbol": {
+                "type": "string"
+              },
+              "label": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "widgets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "mode"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "mode": {
+            "const": "local_on_demand"
+          }
+        }
+      }
+    },
+    "cinematic": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "provider",
+        "enabled_by_default",
+        "max_incremental_usd",
+        "auto_topup"
+      ],
+      "properties": {
+        "provider": {
+          "const": "hermes-video"
+        },
+        "enabled_by_default": {
+          "const": false
+        },
+        "max_incremental_usd": {
+          "const": 0
+        },
+        "auto_topup": {
+          "const": false
+        }
+      }
+    }
+  },
+  "$defs": {
+    "hex": {
+      "type": "string",
+      "pattern": "^#[0-9a-fA-F]{6}$"
+    },
+    "layer": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "role",
+        "id",
+        "depth"
+      ],
+      "properties": {
+        "role": {
+          "enum": [
+            "background",
+            "glow",
+            "foreground"
+          ]
+        },
+        "id": {
+          "type": "string"
+        },
+        "depth": {
+          "type": "number",
+          "minimum": -1,
+          "maximum": 1
+        }
+      }
+    }
+  }
+}
