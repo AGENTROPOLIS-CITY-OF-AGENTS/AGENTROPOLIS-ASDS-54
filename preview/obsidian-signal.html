@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>ASDS54 • Obsidian Signal Preview</title>
+<style>
+:root{--obsidian:#0a0a12;--cyan:#5ee9f0;--red:#ee1b2e;--cream:#f2f0ea}*{box-sizing:border-box}
+body{margin:0;min-height:100vh;background:#10121d;color:var(--cream);font:14px system-ui,sans-serif;display:grid;place-items:center;padding:22px}
+main{display:flex;flex-wrap:wrap;gap:25px;align-items:center;justify-content:center}
+.phone{position:relative;overflow:hidden;border:9px solid #2a2c40;border-radius:40px;width:min(79vw,325px);height:min(148vw,630px);background:linear-gradient(165deg,#111329,#0a0a12 55%,#260b21)}
+.layer{position:absolute;inset:-8%;transition:transform .12s linear;will-change:transform;pointer-events:none}
+.sky{background:radial-gradient(ellipse at 65% 22%,#331427 0,transparent 45%),repeating-linear-gradient(90deg,transparent 0 37px,#5ee9f013 38px 39px)}
+.glow{background:radial-gradient(circle at 57% 43%,#5ee9f044,transparent 38%),radial-gradient(circle at 42% 72%,#ee1b2e44,transparent 30%);animation:pulse 4s ease-in-out infinite}
+.city{inset:auto -8% 0;height:48%;background:linear-gradient(transparent 0 5%,#07111b 6% 100%);clip-path:polygon(0 36%,8% 36%,8% 15%,16% 15%,16% 44%,24% 44%,24% 20%,34% 20%,34% 30%,42% 30%,42% 5%,51% 5%,51% 33%,63% 33%,63% 12%,72% 12%,72% 40%,82% 40%,82% 23%,91% 23%,91% 37%,100% 37%,100% 100%,0 100%);filter:drop-shadow(0 -8px 9px #5ee9f066)}
+.hud{position:absolute;inset:0;padding:50px 22px;display:flex;flex-direction:column;justify-content:space-between;pointer-events:none}
+h1{font-size:18px;letter-spacing:.2em;margin:0;color:var(--cyan)}.clock{font-size:45px;letter-spacing:.03em;font-weight:200}.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.tile{border:1px solid #5ee9f077;background:#11182bcc;padding:12px 3px;text-align:center;border-radius:12px;color:var(--cyan);font-size:10px;letter-spacing:.06em}
+.tile b{display:block;font-size:25px;margin-bottom:3px;font-weight:400}
+aside{width:min(325px,90vw)}aside label{display:block;margin:20px 0 8px}input{width:100%;accent-color:var(--cyan)}
+button{background:#162333;border:1px solid var(--cyan);border-radius:12px;padding:12px;color:var(--cream);cursor:pointer}
+small{color:#abb4c3;line-height:1.5;display:block;margin-top:20px}
+@keyframes pulse{0%,100%{opacity:.7}50%{opacity:1}}
+@media(prefers-reduced-motion:reduce){.layer{transition:none!important;transform:none!important}.glow{animation:none!important;opacity:.7}}
+</style></head><body><main>
+<section class="phone" id="phone" aria-label="Illustrative Obsidian Signal phone theme">
+<div class="layer sky" id="sky"></div><div class="layer glow" id="glow"></div><div class="layer city" id="city"></div>
+<div class="hud"><div><h1>AGENTROPOLIS</h1><div class="clock" id="clock">12:00</div><div style="color:#8ae8ed">OBSIDIAN SIGNAL // PREVIEW</div></div>
+<div class="tiles"><div class="tile"><b>⌖</b>MISSION</div><div class="tile"><b>◇</b>DISTRICTS</div><div class="tile"><b>▤</b>RECEIPTS</div></div></div></section>
+<aside><h2>ASDS54 / ThemePack v0.1</h2><p>Procedural, original visual preview. Move your pointer over the phone to simulate sensor tilt.</p>
+<label for="depth">Depth strength <output id="value">1.0×</output></label><input id="depth" type="range" min=".5" max="2" value="1" step=".1">
+<label><input id="reduced" type="checkbox" style="width:auto"> Reduced motion</label>
+<p><button id="reset">Reset simulated tilt</button></p>
+<small>Read-only demonstration. No device sensors, agents, permissions, WebMCP calls, receipts or paid AI video. No claim of Android APK execution. Motion honors OS reduced-motion preference.</small></aside>
+</main><script>
+const phone=document.getElementById('phone'),depth=document.getElementById('depth'),reduced=document.getElementById('reduced');
+const sky=document.getElementById('sky'),glow=document.getElementById('glow'),city=document.getElementById('city');
+const media=matchMedia('(prefers-reduced-motion: reduce)');let x=0,y=0;
+function render(){const k=Number(depth.value);document.getElementById('value').textContent=k.toFixed(1)+'×';
+const disable=media.matches||reduced.checked;
+for(const [el,d] of [[sky,.05],[glow,.12],[city,-.25]])el.style.transform=disable?'none':`translate(${(x*d*k*100).toFixed(1)}px,${(y*d*k*100).toFixed(1)}px)`;
+glow.style.animationPlayState=disable?'paused':'running';}
+phone.addEventListener('pointermove',e=>{const r=phone.getBoundingClientRect();x=((e.clientX-r.left)/r.width-.5)*2;y=((e.clientY-r.top)/r.height-.5)*2;render()});
+phone.addEventListener('pointerleave',()=>{x=0;y=0;render()});depth.addEventListener('input',render);reduced.addEventListener('change',render);
+document.getElementById('reset').addEventListener('click',()=>{x=0;y=0;render()});
+media.addEventListener('change',render);
+document.getElementById('clock').textContent=new Date().toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'});render();
+</script></body></html>
