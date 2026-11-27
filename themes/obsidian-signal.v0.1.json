@@ -1,0 +1,79 @@
+{
+  "schema_version": "0.1.0",
+  "id": "agentropolis.obsidian-signal",
+  "label": "Obsidian Signal",
+  "license": "original",
+  "palette": {
+    "obsidian": "#0a0a12",
+    "cyan": "#5ee9f0",
+    "red": "#ee1b2e",
+    "cream": "#f2f0ea"
+  },
+  "wallpaper": {
+    "renderer": "android-canvas-procedural",
+    "layers": [
+      {
+        "role": "background",
+        "id": "obsidian-skyline",
+        "depth": 0.05
+      },
+      {
+        "role": "glow",
+        "id": "signal-aura",
+        "depth": 0.12
+      },
+      {
+        "role": "foreground",
+        "id": "city-silhouette",
+        "depth": -0.25
+      }
+    ],
+    "motion": {
+      "sensor": "rotation_vector",
+      "low_pass_alpha": 0.12,
+      "strength_default": 1,
+      "strength_min": 0.5,
+      "strength_max": 2,
+      "active_fps": 60,
+      "idle_fps": 30,
+      "reduced_motion_fps": 0
+    },
+    "glow": {
+      "period_ms": 4000,
+      "min_alpha": 0.7,
+      "max_alpha": 1
+    }
+  },
+  "icons": {
+    "strategy": "in_app_or_user_approved_shortcuts",
+    "tiles": [
+      {
+        "id": "mission",
+        "symbol": "⌖",
+        "label": "MISSION"
+      },
+      {
+        "id": "districts",
+        "symbol": "◇",
+        "label": "DISTRICTS"
+      },
+      {
+        "id": "receipts",
+        "symbol": "▤",
+        "label": "RECEIPTS"
+      }
+    ]
+  },
+  "widgets": [
+    {
+      "id": "pocket-launcher-status",
+      "mode": "local_on_demand"
+    }
+  ],
+  "cinematic": {
+    "provider": "hermes-video",
+    "enabled_by_default": false,
+    "max_incremental_usd": 0,
+    "auto_topup": false
+  }
+}
